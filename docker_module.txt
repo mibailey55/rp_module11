@@ -11,3 +11,18 @@ bash-4.3# PS1="\t\u"
 / # bash
 sh: bash: not found
 / #
+
+Commands needed to get docker build to work on my machine:
+docker-machine env default
+@FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd') DO @%i
+
+docker images
+time="2017-02-27T14:55:59-06:00" level=warning msg="Unable to use system certificate pool: crypto/x509: system root pool is not available on Windows"
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+realpage/alpine     3.3                 28d342726908        7 minutes ago       8.25 MB
+alpine              3.3                 00b92c86273f        2 months ago        4.8 MB
+
+$ docker run -it realpage/alpine:3.3 sh
+time="2017-02-27T14:56:27-06:00" level=warning msg="Unable to use system certificate pool: crypto/x509: system root pool is not available on Windows"
+/ # bash
+bash-4.3#
