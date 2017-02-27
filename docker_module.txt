@@ -4,3 +4,10 @@ alpine              3.3                 00b92c86273f        8 weeks ago         
 
 / # PS1="\T\u"
 18:28root
+
+bash-4.3# PS1="\t\u"
+18:40:13root
+
+/ # bash
+sh: bash: not found
+/ #
